@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Management</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .profile-container {
+    text-align: center; /* Center text for all child elements */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%; /* Full width to center everything properly */
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  .user-id {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  .account-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .account-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">Profile Management</div>
+<div class="profile-container">
+  <div class="logo">{{ initial }}</div>
+  <p class="user-id">{{ user.account_id }}</p> <!-- Display the user's account ID -->
+  <!-- Buttons here -->
+  <a href="{% url 'change_password' %}" class="account-button">Change Password</a>
+
+  <!-- Other function buttons will follow 
+  <button class="account-button">Function1</button>
+  <button class="account-button">Function2</button>
+  <button class="account-button">Function3</button>
+  <button class="account-button">Function4</button>-->
+</div>
+
+</body>
+</html>
